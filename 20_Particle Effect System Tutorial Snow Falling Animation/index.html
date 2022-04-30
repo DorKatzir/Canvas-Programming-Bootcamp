@@ -43,12 +43,12 @@ function initCanvas(){
 
 
     function animate(){
-        //ctx.save();
+        ctx.save();
         ctx.clearRect(0,0,cW,cH);
         ctx.drawImage(bg,0,0);
+        ctx.rotate(0);
         snow(); 
-
-        //ctx.restore();
+        ctx.restore();
     }
     let animateInterval = setInterval(animate, 30);
 
