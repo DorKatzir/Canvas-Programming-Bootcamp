@@ -1,6 +1,8 @@
 # Canvas-Programming-Bootcamp
 
+
 ### Basics
+
 
 [01_2D Context Object and Rectangle Methods](./01_2D Context Object and Rectangle Methods/)  
 
@@ -24,6 +26,7 @@
 
 ### Medium
 
+
 [11_Dynamic Centering and Alignment on the Canvas](./11_Dynamic Centering and Alignment on the Canvas)  
 
 [12_Canvas Animation and App Initialization](./12_Canvas Animation and App Initialization)  
@@ -41,6 +44,7 @@
 [18_Hit Detection Mouse Touch Over Object Arrays](./18_Hit Detection Mouse Touch Over Object Arrays)
 
 ### Advanced
+
 
 [19_Collision Detection Hit Game Enemies](./Collision Detection Hit Game Enemies)  
 
