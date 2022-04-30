@@ -24,6 +24,7 @@
 
 [10_Compositing on the Canvas](./10_Compositing on the Canvas) 
 
+
 ### Medium
 
 
@@ -43,6 +44,7 @@
 
 [18_Hit Detection Mouse Touch Over Object Arrays](./18_Hit Detection Mouse Touch Over Object Arrays)
 
+
 ### Advanced
 
 
@@ -56,6 +58,7 @@
 
 
 ---
+
 
 Thanks to: [Adam Khoury](https://www.developphp.com) <br>
 [Watch and Learn his Canvas Programming Introduction Bootcamp](http://www.developphp.com/video/JavaScript/2D-Context-Object-and-Rectangle-Methods)
