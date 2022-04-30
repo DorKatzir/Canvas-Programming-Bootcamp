@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{ background:#333; }
+        #my_canvas{ background:#FFF; border:#999 1px solid; }
+    </style>
+
+     <script>
+
+        function initCanvas(){
+
+            var ctx = document.getElementById('my_canvas').getContext('2d');
+            var buildings = [ {"id":"house","x":100,"y":100,"w":50,"h":50,"bg":"magenta"},
+                              {"id":"grocery","x":200,"y":100,"w":50,"h":50,"bg":"green"},
+                              {"id":"post_office","x":300,"y":100,"w":50,"h":50,"bg":"orange"}
+                            ];
+            for(var i = 0; i < buildings.length; i++){
+                var b = buildings[i];
+                ctx.fillStyle = b.bg;
+                ctx.fillRect(b.x,b.y,b.w,b.h);
+            }
+        }
+
+        window.addEventListener('load', function(event) {
+            initCanvas();
+        });
+ 
+    </script>
+
+    <title>Hit Detection Mouse Touch Over Object Arrays</title>
+</head>
+<body>
+    <canvas id="my_canvas" width="500" height="300"></canvas>
+</body>
+</html>
+

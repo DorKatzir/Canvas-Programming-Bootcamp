@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{ margin:40px; background:#666; }
+        #my_canvas{ background:#FFF; border:#000 1px solid; }
+    </style>
+
+    <script>
+    
+        function draw() {
+            let ctx = document.getElementById("my_canvas").getContext("2d");
+
+            ctx.lineWidth = 20;
+            ctx.lineCap = 'round' // butt,round, square
+            ctx.lineJoin = 'round' // bevel, round, miter 
+            ctx.miterLimit = 3;
+            ctx.setLineDash([20,10,30,40,10]);
+            ctx.lineDashOffset = 30;
+            //ctx.getLineDash()
+
+            ctx.beginPath();
+            ctx.moveTo(150,150);
+            ctx.lineTo(240,240);
+            ctx.lineTo(300,40);
+            ctx.stroke();
+            
+        
+        }
+        window.onload = draw;
+    </script>
+
+    <title>Line Styles for Lines and Strokes</title>
+</head>
+<body>
+    <canvas id="my_canvas" width="700" height="500"></canvas>
+</body>
+</html>

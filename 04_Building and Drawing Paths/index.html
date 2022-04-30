@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{ margin:40px; background:#666; }
+        #my_canvas{ background:#FFF; border:#000 1px solid; }
+    </style>
+
+    <script>
+
+        function draw() {
+            let ctx = document.getElementById("my_canvas").getContext("2d");
+            ctx.moveTo(50,50);
+            ctx.lineTo(300,50);
+            ctx.bezierCurveTo(300,100,120,140,390,100);
+            ctx.lineTo(390,200);
+            ctx.stroke();
+            
+            // ctx.moveTo(50,50);
+            // ctx.lineTo(300,50);
+            // ctx.arcTo(350,50,350,100,50);
+            // ctx.lineTo(350,200);
+            // ctx.arcTo(350,350,100,350,50);
+            // ctx.lineTo(50, 350);
+            // ctx.closePath();
+            // ctx.stroke();
+
+
+
+            // beginPath() // Resets the current default path
+	        // fill() // Fills subpaths on the current default path
+	        // stroke() // Strokes the current default path
+	        // clip() // Makes a clipping region out of a path
+	        // closePath() // Close current path
+	        // moveTo(x, y) // Creates a new subpath with the given point
+	        // lineTo(x, y) // creates a new line along the current subpath
+	        // isPointInPath(x, y) // Determines if a specified point is in a path
+
+	        // rect(x, y, w, h)
+	        // arc(x, y, radius, startAngle, endAngle, anticlockwise)
+	        // arcTo(x1, y1, x2, y2, radius) // x1, y1 are the subpath
+	        // quadraticCurveTo(cpx, cpy, x, y) cp = bezier control point
+	        // bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
+            
+
+
+
+            
+        
+        }
+        window.onload = draw;
+    </script>
+
+    <title>Building and Drawing Paths</title>
+</head>
+<body>
+    <canvas id="my_canvas" width="700" height="500"></canvas>
+</body>
+</html>

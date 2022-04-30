@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{ margin:40px; background:#666; }
+        #my_canvas{ background:#FFF; border:#000 1px solid; }
+    </style>
+
+    <script>
+
+        let pic = new Image();
+        pic.src = '../images/fruit.png';
+       
+        function draw() {
+            let ctx = document.getElementById('my_canvas').getContext('2d');
+            ctx.drawImage(pic,0,0,200,200);
+            ctx.fillStyle = 'magenta';
+            ctx.fillRect(20,20,100,100);
+            ctx.fillStyle = 'blue';
+            ctx.fillRect(40,40,100,100);
+
+            let src = ctx.getImageData(0,0,100,100);
+            let copy = ctx.createImageData(src.width, src.height);
+            // for(let i = 0; i < copy.data.length; i++){
+            //     copy.data[i] = src.data[i]
+            // }
+            copy.data.set(src.data);
+            ctx.putImageData(copy,250,20);
+  
+            
+        }
+        window.onload = draw;
+    </script>
+
+    <title>Pixel Manipulation on Canvas</title>
+</head>
+<body>
+    <canvas id="my_canvas" width="700" height="500"></canvas>
+</body>
+</html>

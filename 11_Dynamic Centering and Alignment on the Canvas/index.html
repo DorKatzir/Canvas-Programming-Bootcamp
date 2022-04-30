@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{ margin:40px; background:#666; }
+        #my_canvas{ background:#FFF; border:#000 1px solid; }
+        /* #my-canvas>img{max-width: 100px !important;} */
+    </style>
+
+    <script>
+
+        function draw() {
+            let ctx = document.getElementById('my_canvas').getContext('2d');
+            let rectW = 100;
+            let rectH = 100;
+            let rectX = (ctx.canvas.width * .5)-(rectW * .5);
+            let rectY = (ctx.canvas.height * .5)-(rectH * .5);
+            ctx.fillStyle = 'magenta';
+            ctx.fillRect(rectX,rectY,rectW,rectH); 
+        }
+        window.onload = draw;
+    </script>
+
+    <title>Dynamic Centering and Alignment on the Canvas</title>
+</head>
+<body>
+    <canvas id="my_canvas" width="500" height="350"></canvas>
+</body>
+</html>

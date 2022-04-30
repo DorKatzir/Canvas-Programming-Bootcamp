@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{ margin:40px; background:#666; }
+        #my_canvas{ background:#FFF; border:#000 1px solid; }
+    </style>
+
+    <script>
+        function initCanvas(){
+
+            let ctx = document.getElementById('my_canvas').getContext('2d');
+            let cW = ctx.canvas.width, cH = ctx.canvas.height;
+
+            function rectObj(){
+                this.x = 0; 
+                this.y = 0;
+                this.w = 50;
+                this.h = 50;
+                this.render = function(ctx,rx,ry,rw,rh,clr) { 
+                    ctx.fillStyle = clr;
+                    ctx.fillRect(rx,ry,rw,rh);
+                }
+            }
+
+            // Establish Assets outside of the animate function
+            // to avoid re-creating them each time the function runs
+            let rect1 = new rectObj();
+
+            let rect2 = new rectObj();
+            rect2.y = 100;
+            rect2.w = 25;
+ 
+            
+
+            function animate(){
+                ctx.save();
+                ctx.clearRect(0,0,cW,cH); 
+                // Draw Here
+
+                rect1.render(ctx, rect1.x, rect1.y, rect1.w, rect1.h, 'magenta');
+                rect2.render(ctx ,rect2.x, rect2.y, rect2.w, rect2.h, 'blue');
+                rect1.x++;
+                rect2.x++;
+
+                ctx.restore();
+            }
+
+            let animateInterval = setInterval(animate, 30);
+            ctx.canvas.addEventListener('click', function(event){
+                clearInterval(animateInterval);
+            })
+         
+
+        }
+
+        window.addEventListener('load', function(event){
+            initCanvas();
+        })
+ 
+ 
+    </script>
+
+    <title>Object Oriented Assets OOP on Canvas</title>
+</head>
+<body>
+    <canvas id="my_canvas" width="500" height="350"></canvas>
+</body>
+</html>
+

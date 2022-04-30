@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{ margin:40px; background:#666; }
+        #my_canvas{ background:#FFF; border:#000 1px solid; }
+    </style>
+
+    <script>
+       
+        function draw() {
+            let ctx = document.getElementById('my_canvas').getContext('2d');
+            // fillText(text, x, y, maxWidth )
+            // strokeText(text, x, y, maxWidth )
+            ctx.fillStyle= 'orange';
+            ctx.font = 'italic bold 3rem Arial,sans-serif';
+            ctx.fillText('Text On Canvas',50,50,300);
+            ctx.textAlign = 'start'; // start, end, left, right, center
+            ctx.textBaseline = 'hanging'; // top, middle, bottom, hanging, alphabetic, ideographic
+            ctx.strokeText('Text On Canvas',50,50,300);
+
+            
+        }
+        window.onload = draw;
+    </script>
+
+    <title>Drawing Text on Canvas</title>
+</head>
+<body>
+    <canvas id="my_canvas" width="700" height="500"></canvas>
+</body>
+</html>

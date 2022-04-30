@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{ margin:40px; background:#666; }
+        #my_canvas{ background:#FFF; border:#000 1px solid; }
+    </style>
+
+    <script>
+       
+        function draw() {
+            let ctx = document.getElementById('my_canvas').getContext('2d');
+            ctx.fillStyle = '#FC0';
+            ctx.fillRect(50,50,100,100);
+            // ctx.scale(.5,.5);
+            // ctx.rotate(.05);
+            // ctx.translate(0,50);
+            //ctx.transform(1,0,.1,1,30,-20); //xScale, ySkew, xSkew, yScale, xTrans, yTrans
+            ctx.fillStyle = '#FC0';
+            ctx.fillRect(50,50,100,100);
+            ctx.transform(1,0,.5,1,0,0); 
+            ctx.fillRect(170,50,100,100);
+            //ctx.transform(1,0,0,1,0,0); 
+            ctx.setTransform(1,0,0,1,0,0); 
+            ctx.fillRect(170,170,100,100);
+      
+
+
+
+
+            // scale(x, y) 1, 1 is default scale
+            // rotate(angle) Angle value expressed in radians
+            // translate(x, y) Positive or negative numbers
+            // transform(xScale, ySkew, xSkew, yScale, xTrans, yTrans)
+            // Default transform matrix is (1,0,0,1,0,0)
+            // setTransform(xScale, ySkew, xSkew, yScale, xTrans, yTrans)    
+            
+        }
+        window.onload = draw;
+    </script>
+
+    <title>Canvas Transformation Effects</title>
+</head>
+<body>
+    <canvas id="my_canvas" width="700" height="500"></canvas>
+</body>
+</html>
