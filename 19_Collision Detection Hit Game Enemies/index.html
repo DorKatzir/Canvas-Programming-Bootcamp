@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{ margin:10px; background:#CCC; font-family:sans-serif; }
+        #my_canvas{ background:#FFF; border:#000 1px solid; }
+    </style>
+<!-- ///////////////////////////////////////////////////////////////////////////////// -->
+<script>
+
+function initCanvas(){
+    var ctx = document.getElementById('my_canvas').getContext('2d');
+    
+}//End of initCanvas()
+
+
+window.addEventListener('load', function(event) {
+    initCanvas();
+});
+
+</script>
+<!-- ///////////////////////////////////////////////////////////////////////////////// -->
+
+    <title>Collision Detection Hit Game Enemies</title>
+</head>
+<body>
+    <canvas id="my_canvas" width="500" height="350"></canvas>
+    <div>
+        <button id="left_btn">Move Left</button>
+        <button id="right_btn">Move Right</button>
+        <button id="fire_btn">Fire Missile</button>
+    </div>
+    <h3 id="status"></h3>   
+</body>
+</html>
+
