@@ -1,6 +1,6 @@
-### Canvas Introduction 
+### Canvas Introduction
 
-#### Basics  
+#### Basics
 
 [01_2D Context Object and Rectangle Methods](./01_2D Context Object and Rectangle Methods/)<br>
 [02_Fill and Stroke Styles Color Gradient Pattern](./02_Fill and Stroke Styles Color Gradient Pattern/)<br>
