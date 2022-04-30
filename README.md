@@ -58,6 +58,9 @@
 ---
 
 Thanks to: [Adam Khoury](https://www.developphp.com) <br>
-[Watch and Learn his Canvas Programming Introduction Bootcamp](http://www.developphp.com/video/JavaScript/  2D-Context-Object-and-Rectangle-Methods)
+[Watch and Learn his Canvas Programming Introduction Bootcamp](http://www.developphp.com/video/JavaScript/2D-Context-Object-and-Rectangle-Methods)
+
+
+
 
 
