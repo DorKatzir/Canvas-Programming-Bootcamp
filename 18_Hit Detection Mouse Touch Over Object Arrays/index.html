@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body{ background:#333; }
+        body{ background:#333; font-family: sans-serif; }
         #my_canvas{ background:#FFF; border:#999 1px solid; }
     </style>
 
@@ -21,7 +21,7 @@
                 for(var i = 0; i < buildings.length; i++){
                     var b = buildings[i];
                     if(mX >= b.x && mX < (b.x+b.w) && mY >= b.y && mY < (b.y + b.h)){
-                        document.getElementById('status').innerHTML = 'You touched ' + b.id;
+                        document.getElementById('status').innerHTML = `You touched <span style="color:${b.bg};"> ${b.id}</span>`;
                     }
                 }
                 
