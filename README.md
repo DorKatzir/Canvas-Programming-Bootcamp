@@ -1,4 +1,4 @@
-# Canvas-Programming-Bootcamp
+# Canvas Programming Introduction Bootcamp
 
 
 ### Basics
@@ -55,10 +55,9 @@
 [22_Circular Progress Loader Canvas JavaScript Programming Tutorial](./Circular Progress Loader Canvas JavaScript Programming Tutorial)  
 
 
-
 ---
 
-Thanks to: [Adam Khoury](https://www.developphp.com) 
-[Watch and Learn Canvas Programming](http://www.developphp.com/video/JavaScript/  2D-Context-Object-and-Rectangle-Methods)
+Thanks to: [Adam Khoury](https://www.developphp.com) <br>
+[Watch and Learn his Canvas Programming Introduction Bootcamp](http://www.developphp.com/video/JavaScript/  2D-Context-Object-and-Rectangle-Methods)
 
 
