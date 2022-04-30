@@ -109,6 +109,20 @@ function initCanvas(){
         launcher.missiles.push( {'x':launcher.x+(launcher.w *.5), 'y':launcher.y,'w':3,'h':10,'bg':'red'} );
     });
 
+    //mobile\tablet events:
+            //touchstart
+            //touchend
+            //touchcancel
+            //touchleave
+            //touchmove
+    left_btn.addEventListener('touchstart', function(event) {
+        launcher.dir = 'left';
+    });
+    left_btn.addEventListener('touchend', function(event) {
+        launcher.dir = '';
+    });
+    
+
     
 }//End of initCanvas()
 
