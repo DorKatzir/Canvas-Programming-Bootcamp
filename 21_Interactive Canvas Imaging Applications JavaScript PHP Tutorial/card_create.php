@@ -2,15 +2,15 @@
 
     // This code puts the canvas image on the server
     if(isset($GLOBALS['HTTP_RAW_POST_DATA'])){
-    	// $rawImage = $GLOBALS['HTTP_RAW_POST_DATA'];
-    	// $removeHeaders = substr($rawImage, strpos($rawImage, ",")+1);
-    	// $decode = base64_decode($removeHeaders);
-    	// $filename = time()."card".mt_rand();
-    	// $fopen = fopen('card_images/'.$filename.'.jpg', 'wb');
-    	// fwrite($fopen, $decode);
-    	// fclose($fopen);
-    	// echo $filename;
-    	// exit();
+    	$rawImage = $GLOBALS['HTTP_RAW_POST_DATA'];
+    	$removeHeaders = substr($rawImage, strpos($rawImage, ",")+1);
+    	$decode = base64_decode($removeHeaders);
+    	$filename = time()."card".mt_rand();
+    	$fopen = fopen('card_images/'.$filename.'.jpg', 'wb');
+    	fwrite($fopen, $decode);
+    	fclose($fopen);
+    	echo $filename;
+    	exit();
     }
 
 ?>
@@ -39,37 +39,37 @@
         var demo_card_1 = new Image();
         demo_card_1.src = "images/demo_card_1.jpg";
         function preview(){
-        	// var name1 = _("name1").value;
-        	// var name2 = _("name2").value;
-        	// if(name1 == "" || name2 == ""){
-        	// 	alert("Please fill in both fields");
-        	// 	return false;
-        	// }
-        	// var ctx = _('card_canvas').getContext('2d');
-        	// ctx.drawImage(demo_card_1, 0, 0);
-        	// ctx.fillStyle = 'rgba(255,255,255,1)';
-        	// ctx.font = 'bold 34px "Comic Sans MS", cursive';
-        	// ctx.shadowColor = 'rgba(0,0,0,1)';
-        	// ctx.shadowOffsetX = 1;
-        	// ctx.shadowOffsetY = 1;
-        	// ctx.shadowBlur = 2;
-        	// ctx.fillText(name1, 240, 104, 320);
-        	// ctx.fillText(name2, 240, 426, 320);
+        	var name1 = _("name1").value;
+        	var name2 = _("name2").value;
+        	if(name1 == "" || name2 == ""){
+        		alert("Please fill in both fields");
+        		return false;
+        	}
+        	var ctx = _('card_canvas').getContext('2d');
+        	ctx.drawImage(demo_card_1, 0, 0);
+        	ctx.fillStyle = 'rgba(255,255,255,1)';
+        	ctx.font = 'bold 34px "Comic Sans MS", cursive';
+        	ctx.shadowColor = 'rgba(0,0,0,1)';
+        	ctx.shadowOffsetX = 1;
+        	ctx.shadowOffsetY = 1;
+        	ctx.shadowBlur = 2;
+        	ctx.fillText(name1, 240, 104, 320);
+        	ctx.fillText(name2, 240, 426, 320);
         }
         function render(){
-        	// _("renderbtn").style.display = "none";
-        	// _("canvas_save_status").innerHTML = "rendering... please wait...";
-        	// var ctx = _('card_canvas').getContext('2d');
-        	// var imgdata = ctx.canvas.toDataURL("image/jpg");
-        	// var hr = new XMLHttpRequest();
-        	// hr.open("POST", "card_create.php", true);
-        	// hr.setRequestHeader("Content-type", "canvas/upload");
-        	// hr.onreadystatechange = function() {
-        	// 	if(hr.readyState == 4 && hr.status == 200) {
-        	// 		window.location = "card.php?id="+hr.responseText;
-        	// 	}
-        	// }
-        	// hr.send("cd="+imgdata);
+        	_("renderbtn").style.display = "none";
+        	_("canvas_save_status").innerHTML = "rendering... please wait...";
+        	var ctx = _('card_canvas').getContext('2d');
+        	var imgdata = ctx.canvas.toDataURL("image/jpg");
+        	var hr = new XMLHttpRequest();
+        	hr.open("POST", "card_create.php", true);
+        	hr.setRequestHeader("Content-type", "canvas/upload");
+        	hr.onreadystatechange = function() {
+        		if(hr.readyState == 4 && hr.status == 200) {
+        			window.location = "card.php?id="+hr.responseText;
+        		}
+        	}
+        	hr.send("cd="+imgdata);
         }
 
     </script>
